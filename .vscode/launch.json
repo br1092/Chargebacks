@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Development",
+            "request": "launch",            
+            // "request": "attach",
+            "type": "al",
+            "environmentType": "Sandbox",
+            "environmentName": "Sandbox",
+            // "startupObjectId": 22,
+            // "startupObjectType": "Page",
+            "breakOnError": "All",
+            "schemaUpdateMode": "ForceSync",
+            // "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "dependencyPublishingOption": "Ignore"
+            // "tenant": "f072993b-9b7f-4861-a86c-9cd5bcd16d0e",
+        }
+    ]
+}
