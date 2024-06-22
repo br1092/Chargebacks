@@ -1,12 +1,12 @@
 namespace ALProject.ALProject;
 
-page 50100 ChargebackLineEntry
+page 50100 ChargebackLineEntry_BGR
 {
     ApplicationArea = All;
     Caption = 'ChargebackLineEntry';
     PageType = ListPart;
     // PageType = List;
-    SourceTable = ChargebackLine;
+    SourceTable = ChargebackLine_BGR;
     Editable = true;
 
     layout

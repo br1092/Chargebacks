@@ -3,7 +3,7 @@ namespace Chargebacks.Chargebacks;
 using Microsoft.Sales.History;
 using ALProject.ALProject;
 
-pageextension 50104 SalesInvoiceStatsExt extends "Sales Invoice Stats."
+pageextension 50104 SalesInvoiceStatsExt_BGR extends "Sales Invoice Stats."
 {
     layout
     {
@@ -13,6 +13,7 @@ pageextension 50104 SalesInvoiceStatsExt extends "Sales Invoice Stats."
             {
                 ApplicationArea = All;
                 Caption = 'Chargeback Amount';
+                ToolTip = 'Chargeback Amount';
                 Visible = true;
             }
         }

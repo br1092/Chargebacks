@@ -2,7 +2,7 @@ namespace ALProject.ALProject;
 
 using Microsoft.Sales.Setup;
 
-pageextension 50102 SalesReceivablesSetupExt extends "Sales & Receivables Setup"
+pageextension 50102 SalesReceivablesSetupExt_BGR extends "Sales & Receivables Setup"
 {
     layout
     {

@@ -1,4 +1,4 @@
-table 50101 ChargebackEntry
+table 50101 ChargebackEntry_BGR
 {
     Caption = 'ChargebackEntry';
     DataClassification = ToBeClassified;
@@ -56,7 +56,7 @@ table 50101 ChargebackEntry
             Caption = 'Amount';
             DataClassification = CustomerContent;
         }
-        field(9; Status; Enum ChargebackStatus)
+        field(9; Status; Enum ChargebackStatus_BGR)
         {
             Caption = 'Chargeback Status';
             DataClassification = CustomerContent;

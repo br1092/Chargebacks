@@ -3,7 +3,7 @@ namespace Chargebacks.Chargebacks;
 using Microsoft.Sales.History;
 using ALProject.ALProject;
 
-tableextension 50101 SalesInvoiceHeaderExt extends "Sales Invoice Header"
+tableextension 50101 SalesInvoiceHeaderExt_BGR extends "Sales Invoice Header"
 {
     fields
     {
@@ -11,7 +11,7 @@ tableextension 50101 SalesInvoiceHeaderExt extends "Sales Invoice Header"
         {
             Caption = 'Chargeback Amount';
             FieldClass = FlowField;
-            CalcFormula = sum(ChargebackEntry.Amount where("App-to Document No." = field("No."), Status = const(Posted)));
+            CalcFormula = sum(ChargebackEntry_BGR.Amount where("App-to Document No." = field("No."), Status = const(Posted)));
         }
     }
 }

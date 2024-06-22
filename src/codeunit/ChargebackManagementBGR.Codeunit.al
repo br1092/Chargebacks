@@ -7,11 +7,11 @@ using Microsoft.Finance.GeneralLedger.Ledger;
 using Microsoft.Finance.GeneralLedger.Journal;
 using Microsoft.Finance.GeneralLedger.Posting;
 
-codeunit 50100 ChargebackManagementBGR
+codeunit 50100 ChargebackManagement_BGR
 {
-    procedure CreateChargebackEntry(ChargebackLine: Record ChargebackLine; var CustLedgerEntry: Record "Cust. Ledger Entry")
+    procedure CreateChargebackEntry(ChargebackLine: Record ChargebackLine_BGR; var CustLedgerEntry: Record "Cust. Ledger Entry")
     var
-        ChargebackEntry: Record ChargebackEntry;
+        ChargebackEntry: Record ChargebackEntry_BGR;
         NoSeriesLine: Record "No. Series Line";
         TempNoSeries: Code[20];
     begin
@@ -27,10 +27,8 @@ codeunit 50100 ChargebackManagementBGR
         NoSeriesLine.Reset();
         NoSeriesLine.SetRange("Series Code", TempNoSeries);
         NoSeriesLine.SetRange(Open, true);
-        if NoSeriesLine.FindFirst() then begin
-            // Message('Last No. Used: ' + NoSeriesLine."Last No. Used");
+        if NoSeriesLine.FindFirst() then
             ChargebackEntry."Chargeback No." := NoSeriesLine."Last No. Used";
-        end;
 
         ChargebackEntry.Amount := ChargebackLine.Amount;
         ChargebackEntry.Description := ChargebackLine.Description;
@@ -45,15 +43,15 @@ codeunit 50100 ChargebackManagementBGR
 
     procedure DeleteChargebackEntry(ChargebackEntryNo: Integer)
     var
-        ChargebackEntry: Record ChargebackEntry;
+        ChargebackEntry: Record ChargebackEntry_BGR;
     begin
         if ChargebackEntry.Get(ChargebackEntryNo) then
             ChargebackEntry.Delete();
     end;
 
-    procedure GetPostedChargebackEntries(var CustLedgerEntry: Record "Cust. Ledger Entry"): Record ChargebackEntry;
+    procedure GetPostedChargebackEntries(var CustLedgerEntry: Record "Cust. Ledger Entry"): Record ChargebackEntry_BGR;
     var
-        ChargebackEntry: Record ChargebackEntry;
+        ChargebackEntry: Record ChargebackEntry_BGR;
     begin
         ChargebackEntry.Reset();
         ChargebackEntry.SetRange("Cust. Ledger Entry No.", CustLedgerEntry."Entry No.");
@@ -63,10 +61,10 @@ codeunit 50100 ChargebackManagementBGR
             exit(ChargebackEntry);
     end;
 
-    procedure PostChargeback(ChargebackLine: Record ChargebackLine; var TempApplyingCustLedgEntry: Record "Cust. Ledger Entry")
+    procedure PostChargeback(ChargebackLine: Record ChargebackLine_BGR; var TempApplyingCustLedgEntry: Record "Cust. Ledger Entry")
     var
         GenJournalLine: Record "Gen. Journal Line";
-        TempGenJournalBatch: Record "Gen. Journal Batch";
+        GenJournalBatch: Record "Gen. Journal Batch";
         SalesReceivablesSetup: Record "Sales & Receivables Setup";
         GenJnlPostLine: Codeunit "Gen. Jnl.-Post Line";
     // NoSeries: Codeunit "No. Series";
@@ -95,10 +93,10 @@ codeunit 50100 ChargebackManagementBGR
 
         SalesReceivablesSetup.Reset();
         if SalesReceivablesSetup.FindFirst() then begin
-            TempGenJournalBatch.Reset();
-            TempGenJournalBatch.SetRange("No. Series", SalesReceivablesSetup."CB No. SeriesBGR");
-            if TempGenJournalBatch.FindFirst() then
-                GenJournalLine."Journal Batch Name" := TempGenJournalBatch.Name;
+            GenJournalBatch.Reset();
+            GenJournalBatch.SetRange("No. Series", SalesReceivablesSetup."CB No. SeriesBGR");
+            if GenJournalBatch.FindFirst() then
+                GenJournalLine."Journal Batch Name" := GenJournalBatch.Name;
         end;
 
         // Message(format(GenJournalLine));
@@ -172,41 +170,41 @@ codeunit 50100 ChargebackManagementBGR
     //     UpdateChargebackEntryAfterReversal(CustLedgerEntry);
     // end;
 
-    local procedure GetAppliesToCustLedgerEntryNoForReversal(var CustLedgerEntry: Record "Cust. Ledger Entry"): Integer;
-    var
-        DetailedCustLedgerEntry: Record "Detailed Cust. Ledg. Entry";
-    begin
-        DetailedCustLedgerEntry.SetRange("Entry Type", DetailedCustLedgerEntry."Entry Type"::Application);
-        DetailedCustLedgerEntry.SetRange("Document Type", CustLedgerEntry."Document Type");
-        DetailedCustLedgerEntry.SetRange("Document No.", CustLedgerEntry."Document No.");
-        DetailedCustLedgerEntry.SetRange("Initial Document Type", DetailedCustLedgerEntry."Initial Document Type"::Invoice);
-        DetailedCustLedgerEntry.SetFilter("Cust. Ledger Entry No.", '<>%1', CustLedgerEntry."Entry No.");
-        if not DetailedCustLedgerEntry.IsEmpty then
-            if DetailedCustLedgerEntry.FindFirst() then
-                exit(DetailedCustLedgerEntry."Cust. Ledger Entry No.");
-    end;
+    // local procedure GetAppliesToCustLedgerEntryNoForReversal(var CustLedgerEntry: Record "Cust. Ledger Entry"): Integer;
+    // var
+    //     DetailedCustLedgerEntry: Record "Detailed Cust. Ledg. Entry";
+    // begin
+    //     DetailedCustLedgerEntry.SetRange("Entry Type", DetailedCustLedgerEntry."Entry Type"::Application);
+    //     DetailedCustLedgerEntry.SetRange("Document Type", CustLedgerEntry."Document Type");
+    //     DetailedCustLedgerEntry.SetRange("Document No.", CustLedgerEntry."Document No.");
+    //     DetailedCustLedgerEntry.SetRange("Initial Document Type", DetailedCustLedgerEntry."Initial Document Type"::Invoice);
+    //     DetailedCustLedgerEntry.SetFilter("Cust. Ledger Entry No.", '<>%1', CustLedgerEntry."Entry No.");
+    //     if not DetailedCustLedgerEntry.IsEmpty then
+    //         if DetailedCustLedgerEntry.FindFirst() then
+    //             exit(DetailedCustLedgerEntry."Cust. Ledger Entry No.");
+    // end;
 
-    local procedure GetAppliesToDocNoForReversal(var CustLedgerEntry: Record "Cust. Ledger Entry"): Code[20]
-    var
-        CustLedgerEntry2: Record "Cust. Ledger Entry";
-        AppliesToEntryNo: Integer;
-    begin
-        AppliesToEntryNo := GetAppliesToCustLedgerEntryNoForReversal(CustLedgerEntry);
-        if CustLedgerEntry2.Get(AppliesToEntryNo) then
-            exit(CustLedgerEntry2."Document No.");
-    end;
+    // local procedure GetAppliesToDocNoForReversal(var CustLedgerEntry: Record "Cust. Ledger Entry"): Code[20]
+    // var
+    //     CustLedgerEntry2: Record "Cust. Ledger Entry";
+    //     AppliesToEntryNo: Integer;
+    // begin
+    //     AppliesToEntryNo := GetAppliesToCustLedgerEntryNoForReversal(CustLedgerEntry);
+    //     if CustLedgerEntry2.Get(AppliesToEntryNo) then
+    //         exit(CustLedgerEntry2."Document No.");
+    // end;
 
-    local procedure GetChargebackCustLedgerEntryNo(var GenJournalLine: Record "Gen. Journal Line"): Integer
-    var
-        CustLedgerEntry: Record "Cust. Ledger Entry";
-    begin
-        CustLedgerEntry.SetRange("Customer No.", GenJournalLine."Bal. Account No.");
-        CustLedgerEntry.SetRange("Document Type", CustLedgerEntry."Document Type"::" ");
-        CustLedgerEntry.SetRange("Document No.", GenJournalLine."Document No.");
-        if not CustLedgerEntry.IsEmpty then
-            if CustLedgerEntry.FindFirst() then
-                exit(CustLedgerEntry."Entry No.");
-    end;
+    // local procedure GetChargebackCustLedgerEntryNo(var GenJournalLine: Record "Gen. Journal Line"): Integer
+    // var
+    //     CustLedgerEntry: Record "Cust. Ledger Entry";
+    // begin
+    //     CustLedgerEntry.SetRange("Customer No.", GenJournalLine."Bal. Account No.");
+    //     CustLedgerEntry.SetRange("Document Type", CustLedgerEntry."Document Type"::" ");
+    //     CustLedgerEntry.SetRange("Document No.", GenJournalLine."Document No.");
+    //     if not CustLedgerEntry.IsEmpty then
+    //         if CustLedgerEntry.FindFirst() then
+    //             exit(CustLedgerEntry."Entry No.");
+    // end;
 
     local procedure GetChargebackNoSeries(IsReversal: Boolean): Code[20]
     var
@@ -223,7 +221,7 @@ codeunit 50100 ChargebackManagementBGR
 
     local procedure GetNextChargebackEntryNo(): Integer
     var
-        ChargebackEntry: Record ChargebackEntry;
+        ChargebackEntry: Record ChargebackEntry_BGR;
     begin
         if not ChargebackEntry.IsEmpty then begin
             ChargebackEntry.SetAscending("Entry No.", true);
@@ -328,7 +326,7 @@ codeunit 50100 ChargebackManagementBGR
 
     procedure UpdateChargebackAfterReversal(Number: Integer)
     var
-        ChargebackEntry: Record ChargebackEntry;
+        ChargebackEntry: Record ChargebackEntry_BGR;
         GLEntry: Record "G/L Entry";
         CustLedgerEntry: Record "Cust. Ledger Entry";
         TempEntryNo: Integer;
@@ -360,7 +358,7 @@ codeunit 50100 ChargebackManagementBGR
 
     procedure UpdateChargebackEntryAfterPosting()
     var
-        ChargebackEntry: Record ChargebackEntry;
+        ChargebackEntry: Record ChargebackEntry_BGR;
         CustLedgerEntry: Record "Cust. Ledger Entry";
     begin
         CustLedgerEntry.Reset();

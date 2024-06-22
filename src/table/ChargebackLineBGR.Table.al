@@ -1,4 +1,4 @@
-table 50100 ChargebackLine
+table 50100 ChargebackLine_BGR
 {
     Caption = 'ChargebackLine';
     DataClassification = ToBeClassified;

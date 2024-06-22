@@ -1,47 +1,49 @@
 namespace ALProject.ALProject;
 
 using Microsoft.Sales.Receivables;
+using Microsoft.Finance.GeneralLedger.Journal;
 
-pageextension 50103 CustomerLedgerEntriesExt extends "Customer Ledger Entries"
+pageextension 50101 ApplyCustomerEntriesExt_BGR extends "Apply Customer Entries"
 {
-    layout
-    { }
+    // layout
+    // {
+    // }
     actions
     {
-        // addlast(Category_Process)
+        // addbefore("&Navigate_Promoted")
         addafter(Category_Category5)
         {
             group(Chargeback)
             {
                 actionref(EnterChargebacks_Promoted; EnterChargebacks)
                 { }
-                // actionref(ReverseChargeback_Promoted; ReverseChargeback)
-                // { }
             }
         }
-        addlast("F&unctions")
-        // addafter("F&unctions")
+        // addfirst("Ent&ry")
+        // addafter("Ent&ry")
+        addfirst("Ent&ry")
         {
             // group(Chargeback)
             // {
+            // Caption = 'Chargeback';
             action(EnterChargebacks)
             {
-                Caption = 'Enter Chargebacks';
+                Caption = 'Enter Chargeback(s)';
                 Visible = true;
                 ApplicationArea = All;
                 ToolTip = 'Enter one or more chargeback(s) against the selected Customer Ledger Entry.';
                 trigger OnAction()
                 var
-                    PostedChargebackEntries: Record ChargebackEntry;
-                    TempChargebackLine: Record ChargebackLine;
-                    ApplyChargebacks: Page ApplyChargebacks;
+                    // PostedChargebackEntries: Record ChargebackEntry;
+                    // TempChargebackLine: Record ChargebackLine;
+                    ApplyChargebacks: Page ApplyChargebacks_BGR;
 
-                    ChargebackManagement: Codeunit ChargebackManagementBGR;
+                // ChargebackManagement: Codeunit ChargebackManagementBGR;
                 begin
-                    ApplyChargebacks.SetTempApplyingCustLedgEntry(Rec);
+                    ApplyChargebacks.SetApplyingCustLedgEntry(Rec);
 
                     // PostedChargebackEntries := GetPostedChargebackEntries(Rec);
-                    PostedChargebackEntries := ChargebackManagement.GetPostedChargebackEntries(Rec);
+                    // PostedChargebackEntries := ChargebackManagement.GetPostedChargebackEntries(Rec);
 
                     // ApplyChargebacks.SetPostedChargebackEntries(PostedChargebackEntries);
 
@@ -50,16 +52,6 @@ pageextension 50103 CustomerLedgerEntriesExt extends "Customer Ledger Entries"
 
                 end;
             }
-            // action(ReverseChargeback)
-            // {
-            //     Caption = 'Reverse Chargeback';
-            //     Visible = true;
-            //     ApplicationArea = All;
-            //     trigger OnAction()
-            //     begin
-            //         ReverseChargeback(Rec);
-            //     end;
-            // }
             // }
         }
     }
@@ -72,12 +64,5 @@ pageextension 50103 CustomerLedgerEntriesExt extends "Customer Ledger Entries"
     //     ChargebackEntry.SetRange("Cust. Ledger Entry No.", CustLedgerEntry."Entry No.");
     //     if not ChargebackEntry.IsEmpty then
     //         exit(ChargebackEntry);
-    // end;
-
-    // local procedure ReverseChargeback(var CustLedgerEntry: Record "Cust. Ledger Entry")
-    // var
-    //     ChargebackManagement: Codeunit ChargebackManagementBGR;
-    // begin
-    //     ChargebackManagement.ReverseChargeback(Rec);
     // end;
 }

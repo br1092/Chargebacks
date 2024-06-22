@@ -1,11 +1,11 @@
 namespace Chargebacks.Chargebacks;
 
-page 50103 PostedChargebacksSubform
+page 50103 PostedChargebacksSubform_BGR
 {
     ApplicationArea = All;
     Caption = 'Posted Chargebacks';
     PageType = ListPart;
-    SourceTable = ChargebackEntry;
+    SourceTable = ChargebackEntry_BGR;
     Editable = false;
 
     layout

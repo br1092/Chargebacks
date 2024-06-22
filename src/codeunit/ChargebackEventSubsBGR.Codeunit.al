@@ -8,7 +8,7 @@ using Microsoft.Foundation.Navigate;
 using Microsoft.Finance.GeneralLedger.Journal;
 using ALProject.ALProject;
 
-codeunit 50101 ChargebackEventSubs
+codeunit 50101 ChargebackEventSubs_BGR
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Gen. Jnl.-Check Line", 'OnBeforeErrorIfPositiveAmt', '', true, false)]
     local procedure OnBeforeErrorIfPositiveAmt(GenJnlLine: Record "Gen. Journal Line"; var RaiseError: Boolean)
@@ -23,26 +23,26 @@ codeunit 50101 ChargebackEventSubs
         // ApplyUnapplyParameters: Record "Apply Unapply Parameters";
         // DtldCustLedgEntry2: Record "Detailed Cust. Ledg. Entry";
         // CustEntryApplyPostedEntries: Codeunit "CustEntry-Apply Posted Entries";
-        ChargebackManagement: Codeunit ChargebackManagementBGR;
+        ChargebackManagement: Codeunit ChargebackManagement_BGR;
     begin
 
-        if CustLedgEntry."Document Type" = CustLedgEntry."Document Type"::Chargeback then begin
+        if CustLedgEntry."Document Type" = CustLedgEntry."Document Type"::Chargeback then //begin
             ChargebackManagement.UnapplyChargebackAndPost(CustLedgEntry);
-            // DtldCustLedgEntry2.Reset();
-            // DtldCustLedgEntry2.SetRange("Transaction No.", CustLedgEntry."Transaction No.");
-            // DtldCustLedgEntry2.SetRange("Entry Type", DtldCustLedgEntry2."Entry Type"::Application);
-            // if DtldCustLedgEntry2.FindSet() then begin
-            //     ApplyUnapplyParameters."Document No." := CustLedgEntry."Document No.";
-            //     ApplyUnapplyParameters."Posting Date" := CustLedgEntry."Posting Date";
-            //     CustEntryApplyPostedEntries.PostUnApplyCustomer(DtldCustLedgEntry2, ApplyUnapplyParameters);
-            // end;
-        end;
+        // DtldCustLedgEntry2.Reset();
+        // DtldCustLedgEntry2.SetRange("Transaction No.", CustLedgEntry."Transaction No.");
+        // DtldCustLedgEntry2.SetRange("Entry Type", DtldCustLedgEntry2."Entry Type"::Application);
+        // if DtldCustLedgEntry2.FindSet() then begin
+        //     ApplyUnapplyParameters."Document No." := CustLedgEntry."Document No.";
+        //     ApplyUnapplyParameters."Posting Date" := CustLedgEntry."Posting Date";
+        //     CustEntryApplyPostedEntries.PostUnApplyCustomer(DtldCustLedgEntry2, ApplyUnapplyParameters);
+        // end;
+        // end;
     end;
 
     [EventSubscriber(ObjectType::Table, Database::"Reversal Entry", 'OnAfterReverseEntries', '', false, false)]
     local procedure OnAfterReverseEntries(Number: Integer; RevType: Integer; HideDialog: Boolean)
     var
-        ChargebackManagement: Codeunit ChargebackManagementBGR;
+        ChargebackManagement: Codeunit ChargebackManagement_BGR;
     begin
         ChargebackManagement.UpdateChargebackAfterReversal(Number);
     end;

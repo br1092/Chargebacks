@@ -7,12 +7,12 @@ using Microsoft.Finance.GeneralLedger.Posting;
 using Chargebacks.Chargebacks;
 using Microsoft.Finance.GeneralLedger.Journal;
 
-page 50101 ApplyChargebacks
+page 50101 ApplyChargebacks_BGR
 {
     ApplicationArea = All;
     Caption = 'Apply Chargebacks';
     PageType = Worksheet;
-    SourceTable = ChargebackLine;
+    SourceTable = ChargebackLine_BGR;
 
     layout
     {
@@ -23,28 +23,28 @@ page 50101 ApplyChargebacks
                 Caption = 'Applying Document';
                 ShowCaption = true;
                 // Caption = 'General';
-                field(ApplyingPostingDate; TempApplyingCustLedgEntry."Posting Date")
+                field(ApplyingPostingDate; ApplyingCustLedgEntry."Posting Date")
                 {
                     ApplicationArea = Basic, Suite;
                     Caption = 'Posting Date';
                     Editable = false;
                     ToolTip = 'Specifies the posting date of the entry to be applied. This date is used to find the correct exchange rate when applying entries in different currencies.';
                 }
-                field(ApplyingDocumentType; TempApplyingCustLedgEntry."Document Type")
+                field(ApplyingDocumentType; ApplyingCustLedgEntry."Document Type")
                 {
                     ApplicationArea = Basic, Suite;
                     Caption = 'Document Type';
                     Editable = false;
                     ToolTip = 'Specifies the document type of the entry to be applied.';
                 }
-                field(ApplyingDocumentNo; TempApplyingCustLedgEntry."Document No.")
+                field(ApplyingDocumentNo; ApplyingCustLedgEntry."Document No.")
                 {
                     ApplicationArea = Basic, Suite;
                     Caption = 'Document No.';
                     Editable = false;
                     ToolTip = 'Specifies the document number of the entry to be applied.';
                 }
-                field(ApplyingCustomerNo; TempApplyingCustLedgEntry."Customer No.")
+                field(ApplyingCustomerNo; ApplyingCustLedgEntry."Customer No.")
                 {
                     ApplicationArea = Basic, Suite;
                     Caption = 'Customer No.';
@@ -52,7 +52,7 @@ page 50101 ApplyChargebacks
                     ToolTip = 'Specifies the customer number of the entry to be applied.';
                     Visible = false;
                 }
-                field(ApplyingCustomerName; TempApplyingCustLedgEntry."Customer Name")
+                field(ApplyingCustomerName; ApplyingCustLedgEntry."Customer Name")
                 {
                     ApplicationArea = Basic, Suite;
                     Caption = 'Customer Name';
@@ -60,7 +60,7 @@ page 50101 ApplyChargebacks
                     ToolTip = 'Specifies the customer name of the entry to be applied.';
                     Visible = true;
                 }
-                field(ApplyingDescription; TempApplyingCustLedgEntry.Description)
+                field(ApplyingDescription; ApplyingCustLedgEntry.Description)
                 {
                     ApplicationArea = Basic, Suite;
                     Caption = 'Description';
@@ -68,21 +68,21 @@ page 50101 ApplyChargebacks
                     ToolTip = 'Specifies the description of the entry to be applied.';
                     Visible = true;
                 }
-                field(ApplyingCurrencyCode; TempApplyingCustLedgEntry."Currency Code")
+                field(ApplyingCurrencyCode; ApplyingCustLedgEntry."Currency Code")
                 {
                     ApplicationArea = Suite;
                     Caption = 'Currency Code';
                     Editable = false;
                     ToolTip = 'Specifies the code for the currency that amounts are shown in.';
                 }
-                field(ApplyingAmount; TempApplyingCustLedgEntry.Amount)
+                field(ApplyingAmount; ApplyingCustLedgEntry.Amount)
                 {
                     ApplicationArea = Basic, Suite;
                     Caption = 'Amount';
                     Editable = false;
                     ToolTip = 'Specifies the amount on the entry to be applied.';
                 }
-                field(ApplyingRemainingAmount; TempApplyingCustLedgEntry."Remaining Amount")
+                field(ApplyingRemainingAmount; ApplyingCustLedgEntry."Remaining Amount")
                 {
                     ApplicationArea = Basic, Suite;
                     Caption = 'Remaining Amount';
@@ -130,7 +130,7 @@ page 50101 ApplyChargebacks
                 }
             }
 
-            part(PostedChargebacksSubform; PostedChargebacksSubform)
+            part(PostedChargebacksSubform; PostedChargebacksSubform_BGR)
             {
                 ApplicationArea = Basic, Suite;
                 Editable = true;
@@ -252,7 +252,7 @@ page 50101 ApplyChargebacks
                         if Rec.Amount = 0 then
                             error('Please enter an Amount.')
                         else
-                            SubmitChargeback(Rec, TempApplyingCustLedgEntry);
+                            SubmitChargeback(Rec, ApplyingCustLedgEntry);
                         Rec.Delete();
                         // UpdatePostedChargebackEntries();
                         CurrPage.Update();
@@ -272,7 +272,7 @@ page 50101 ApplyChargebacks
                 //             Rec.FindFirst();
                 //             repeat
                 //                 if Rec.Amount > 0 then
-                //                     SubmitChargeback(Rec, TempApplyingCustLedgEntry);
+                //                     SubmitChargeback(Rec, ApplyingCustLedgEntry);
                 //                 Rec.DeleteAll();
                 //                 CurrPage.Update();
                 //             until Rec.Next() = 0;
@@ -299,8 +299,8 @@ page 50101 ApplyChargebacks
 
     var
         // PostedChargebackEntries: Record ChargebackEntry temporary;
-        TempApplyingCustLedgEntry: Record "Cust. Ledger Entry";
-        PostedIsVisible: Boolean;
+        ApplyingCustLedgEntry: Record "Cust. Ledger Entry";
+        // PostedIsVisible: Boolean;
         PostedChargebacksVisible: Boolean;
 
     // trigger OnClosePage()
@@ -313,10 +313,10 @@ page 50101 ApplyChargebacks
     //         Rec.FindFirst();
     //         repeat
     //             if Rec.Amount > 0 then
-    //                 // if Dialog.Confirm('Are you sure that you would like to post a chargeback for ' + Format(Rec.Amount) + ' against Cust. Ledger Entry: ' + format(TempApplyingCustLedgEntry."Entry No.") + '?') then begin
-    //                 if Dialog.Confirm(StrSubstNo(DialogLabel, Format(Rec.Amount), format(TempApplyingCustLedgEntry."Entry No."), format(TempApplyingCustLedgEntry."Document Type"), format(TempApplyingCustLedgEntry."Document No."))) then begin
-    //                     PostChargeback(Rec, TempApplyingCustLedgEntry);
-    //                     CreateChargebackEntry(Rec, TempApplyingCustLedgEntry);
+    //                 // if Dialog.Confirm('Are you sure that you would like to post a chargeback for ' + Format(Rec.Amount) + ' against Cust. Ledger Entry: ' + format(ApplyingCustLedgEntry."Entry No.") + '?') then begin
+    //                 if Dialog.Confirm(StrSubstNo(DialogLabel, Format(Rec.Amount), format(ApplyingCustLedgEntry."Entry No."), format(ApplyingCustLedgEntry."Document Type"), format(ApplyingCustLedgEntry."Document No."))) then begin
+    //                     PostChargeback(Rec, ApplyingCustLedgEntry);
+    //                     CreateChargebackEntry(Rec, ApplyingCustLedgEntry);
     //                 end
     //         // else
     //         //     Message('Do not post');
@@ -332,7 +332,7 @@ page 50101 ApplyChargebacks
     trigger OnAfterGetRecord()
     begin
         // SetVisibility();
-        // CurrPage.PostedChargebacksSubform.Page.SetVisibility(TempApplyingCustLedgEntry."Entry No.");
+        // CurrPage.PostedChargebacksSubform.Page.SetVisibility(ApplyingCustLedgEntry."Entry No.");
     end;
 
     trigger OnNewRecord(BelowxRec: Boolean)
@@ -340,8 +340,8 @@ page 50101 ApplyChargebacks
         SalesReceivablesSetup: Record "Sales & Receivables Setup";
     begin
         Rec."Line No." := xRec."Line No." + 1;
-        Rec."Posting Date" := TempApplyingCustLedgEntry."Posting Date";
-        Rec."Cust. Ledger Entry No." := TempApplyingCustLedgEntry."Entry No.";
+        Rec."Posting Date" := ApplyingCustLedgEntry."Posting Date";
+        Rec."Cust. Ledger Entry No." := ApplyingCustLedgEntry."Entry No.";
         if SalesReceivablesSetup.FindFirst() then
             if StrLen(SalesReceivablesSetup."CB Account No.BGR") <> 0 then begin
                 Rec."Account No." := SalesReceivablesSetup."CB Account No.BGR";
@@ -349,9 +349,9 @@ page 50101 ApplyChargebacks
             end;
     end;
 
-    procedure SetTempApplyingCustLedgEntry(var CustLedgerEntry: Record "Cust. Ledger Entry")
+    procedure SetApplyingCustLedgEntry(var CustLedgerEntry: Record "Cust. Ledger Entry")
     begin
-        TempApplyingCustLedgEntry := CustLedgerEntry;
+        ApplyingCustLedgEntry := CustLedgerEntry;
     end;
 
     // procedure SetPostedChargebackEntries(var ChargebackEntry: Record ChargebackEntry)
@@ -371,42 +371,44 @@ page 50101 ApplyChargebacks
     //     // end
     // end;
 
-    local procedure CreateChargebackEntry(ChargebackLine: Record ChargebackLine; var CustLedgerEntry: Record "Cust. Ledger Entry")
+    local procedure CreateChargebackEntry(ChargebackLine: Record ChargebackLine_BGR; var CustLedgerEntry: Record "Cust. Ledger Entry")
     var
-        ChargebackManagement: Codeunit ChargebackManagementBGR;
+        ChargebackManagement: Codeunit ChargebackManagement_BGR;
     begin
         ChargebackManagement.CreateChargebackEntry(ChargebackLine, CustLedgerEntry);
     end;
 
-    local procedure PostChargeback(ChargebackLine: Record ChargebackLine; var CustLedgerEntry: Record "Cust. Ledger Entry")
+    local procedure PostChargeback(ChargebackLine: Record ChargebackLine_BGR; var CustLedgerEntry: Record "Cust. Ledger Entry")
     var
-        ChargebackManagement: Codeunit ChargebackManagementBGR;
+        ChargebackManagement: Codeunit ChargebackManagement_BGR;
     begin
         ChargebackManagement.PostChargeback(ChargebackLine, CustLedgerEntry);
     end;
 
-    local procedure SubmitChargeback(ChargebackLine: Record ChargebackLine; var CustLedgerEntry: Record "Cust. Ledger Entry")
+    local procedure SubmitChargeback(ChargebackLine: Record ChargebackLine_BGR; var CustLedgerEntry: Record "Cust. Ledger Entry")
     var
     begin
         PostChargeback(ChargebackLine, CustLedgerEntry);
         CreateChargebackEntry(ChargebackLine, CustLedgerEntry);
-        UpdateChargebackAfterPosting(ChargebackLine);
+        // UpdateChargebackAfterPosting(ChargebackLine);
+        UpdateChargebackAfterPosting();
     end;
 
     local procedure SetPostedChargebackVisibility()
     var
-        ChargebackEntry: Record ChargebackEntry;
+        ChargebackEntry: Record ChargebackEntry_BGR;
     begin
         PostedChargebacksVisible := false;
         ChargebackEntry.Reset();
-        ChargebackEntry.SetRange("Cust. Ledger Entry No.", TempApplyingCustLedgEntry."Entry No.");
-        if ChargebackEntry.FindFirst() then
+        ChargebackEntry.SetRange("Cust. Ledger Entry No.", ApplyingCustLedgEntry."Entry No.");
+        if not ChargebackEntry.IsEmpty() then
             PostedChargebacksVisible := true;
     end;
 
-    local procedure UpdateChargebackAfterPosting(ChargebackLine: Record ChargebackLine)
+    // local procedure UpdateChargebackAfterPosting(ChargebackLine: Record ChargebackLine_BGR)
+    local procedure UpdateChargebackAfterPosting()
     var
-        ChargebackManagement: Codeunit ChargebackManagementBGR;
+        ChargebackManagement: Codeunit ChargebackManagement_BGR;
     begin
         ChargebackManagement.UpdateChargebackEntryAfterPosting();
     end;
@@ -415,7 +417,7 @@ page 50101 ApplyChargebacks
     // var
     //     ChargebackManagement: COdeunit ChargebackManagement;
     // begin
-    //     PostedChargebackEntries := ChargebackManagement.GetPostedChargebackEntries(TempApplyingCustLedgEntry);
+    //     PostedChargebackEntries := ChargebackManagement.GetPostedChargebackEntries(ApplyingCustLedgEntry);
 
     //     // if not PostedChargebackEntries.IsEmpty() then
     //     if PostedChargebackEntries."Entry No." > 0 then
@@ -456,14 +458,14 @@ page 50101 ApplyChargebacks
     //     //         GenJournalLine."Account No." := SalesReceivablesSetup."Chargeback Account No.";
 
     //     GenJournalLine."Bal. Account Type" := GenJournalLine."Bal. Account Type"::Customer;
-    //     GenJournalLine."Bal. Account No." := TempApplyingCustLedgEntry."Customer No.";
-    //     GenJournalLine."Applies-to Doc. Type" := TempApplyingCustLedgEntry."Document Type";
-    //     GenJournalLine."Applies-to Doc. No." := TempApplyingCustLedgEntry."Document No.";
+    //     GenJournalLine."Bal. Account No." := ApplyingCustLedgEntry."Customer No.";
+    //     GenJournalLine."Applies-to Doc. Type" := ApplyingCustLedgEntry."Document Type";
+    //     GenJournalLine."Applies-to Doc. No." := ApplyingCustLedgEntry."Document No.";
 
     //     GenJournalLine.Description := ChargebackLine.Description;
     //     GenJournalLine.Amount := ChargebackLine.Amount;
 
-    //     GenJournalLine."Dimension Set ID" := TempApplyingCustLedgEntry."Dimension Set ID";
+    //     GenJournalLine."Dimension Set ID" := ApplyingCustLedgEntry."Dimension Set ID";
 
     //     Message(format(GenJournalLine));
     //     GenJnlPostLine.RunWithCheck(GenJournalLine);

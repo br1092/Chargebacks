@@ -1,6 +1,6 @@
 namespace ALProject.ALProject;
 
-enum 50100 ChargebackStatus
+enum 50100 ChargebackStatus_BGR
 {
     Extensible = true;
 

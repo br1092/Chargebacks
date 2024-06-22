@@ -1,11 +1,11 @@
 namespace ALProject.ALProject;
 
-page 50102 ChargebackEntries
+page 50102 ChargebackEntries_BGR
 {
     ApplicationArea = All;
     Caption = 'Chargeback Entries';
     PageType = List;
-    SourceTable = ChargebackEntry;
+    SourceTable = ChargebackEntry_BGR;
     UsageCategory = History;
 
     layout
@@ -133,9 +133,9 @@ page 50102 ChargebackEntries
         }
     }
 
-    local procedure DeleteChargebackEntry(var ChargebackEntry: Record ChargebackEntry)
+    local procedure DeleteChargebackEntry(var ChargebackEntry: Record ChargebackEntry_BGR)
     var
-        ChargebackManagement: Codeunit ChargebackManagementBGR;
+        ChargebackManagement: Codeunit ChargebackManagement_BGR;
     begin
         ChargebackManagement.DeleteChargebackEntry(ChargebackEntry."Entry No.");
     end;

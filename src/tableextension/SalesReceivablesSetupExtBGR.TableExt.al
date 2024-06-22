@@ -4,7 +4,7 @@ using Microsoft.Sales.Setup;
 using Microsoft.Foundation.NoSeries;
 using Microsoft.Finance.GeneralLedger.Account;
 
-tableextension 50100 SalesReceivablesSetupExtBGR extends "Sales & Receivables Setup"
+tableextension 50100 SalesReceivablesSetupExt_BGR extends "Sales & Receivables Setup"
 {
     fields
     {
