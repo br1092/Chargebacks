@@ -51,10 +51,10 @@ page 50103 PostedChargebacksSubform
                 {
                     ToolTip = 'Specifies the value of the Chargeback No. field.';
                 }
-                field("Reversal No."; Rec."Reversal No.")
-                {
-                    ToolTip = 'Specifies the value of the Reversal No. field.';
-                }
+                // field("Reversal No."; Rec."Reversal No.")
+                // {
+                //     ToolTip = 'Specifies the value of the Reversal No. field.';
+                // }
                 // field("Customer No."; Rec."Customer No.")
                 // {
                 //     ToolTip = 'Specifies the value of the Customer No. field.';

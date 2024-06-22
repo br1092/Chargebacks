@@ -10,17 +10,17 @@ pageextension 50102 SalesReceivablesSetupExt extends "Sales & Receivables Setup"
         {
             group(Chargebacks)
             {
-                field("Chargeback Account No."; Rec."Chargeback Account No.")
+                field("Chargeback Account No."; Rec."CB No. SeriesBGR")
                 {
                     Visible = true;
                     ApplicationArea = All;
                 }
-                field("Chargeback No. Series"; Rec."Chargeback No. Series")
+                field("Chargeback No. Series"; Rec."CB No. SeriesBGR")
                 {
                     Visible = true;
                     ApplicationArea = All;
                 }
-                field("Chargeback Reversal No. Series"; Rec."Chargeback Reversal No. Series")
+                field("Chargeback Reversal No. Series"; Rec."CB Reversal No. SeriesBGR")
                 {
                     Visible = true;
                     ApplicationArea = All;

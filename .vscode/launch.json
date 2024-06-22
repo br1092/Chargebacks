@@ -2,21 +2,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Development",
-            "request": "launch",            
-            // "request": "attach",
+            "name": "Microsoft cloud sandbox",
+            "request": "launch",
             "type": "al",
             "environmentType": "Sandbox",
-            "environmentName": "Sandbox",
-            // "startupObjectId": 22,
-            // "startupObjectType": "Page",
-            "breakOnError": "All",
+            "environmentName": "sandbox",
+            "startupObjectId": 50102,
+            "startupObjectType": "Page",
             "schemaUpdateMode": "ForceSync",
-            // "launchBrowser": true,
+            "breakOnError": "All",
+            "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
-            "enableSqlInformationDebugger": true,
-            "dependencyPublishingOption": "Ignore"
-            // "tenant": "f072993b-9b7f-4861-a86c-9cd5bcd16d0e",
+            "enableSqlInformationDebugger": true
         }
     ]
 }

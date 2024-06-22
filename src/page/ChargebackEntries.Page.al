@@ -14,46 +14,6 @@ page 50102 ChargebackEntries
         {
             repeater(General)
             {
-                field(Amount; Rec.Amount)
-                {
-                    ToolTip = 'Specifies the value of the Amount field.';
-                }
-                field("Cust. Ledger Entry No."; Rec."Cust. Ledger Entry No.")
-                {
-                    ToolTip = 'Specifies the value of the Cust. Ledger Entry No. field.';
-                }
-                field("Cust. Ledger Entry No. (Rev.)"; Rec."Cust. Ledger Entry No. (Rev.)")
-                {
-                    ToolTip = 'Specifies the value of the Cust. Ledger Entry No. (Reversal) field.';
-                }
-                field("Customer No."; Rec."Customer No.")
-                {
-                    ToolTip = 'Specifies the value of the Customer No. field.';
-                }
-                field("Account No."; Rec."Account No.")
-                {
-                    ToolTip = 'Specifies the value of the Account No. field.';
-                }
-                field(Description; Rec.Description)
-                {
-                    ToolTip = 'Specifies the value of the Description field.';
-                }
-                field("Document Type"; Rec."Document Type")
-                {
-                    ToolTip = 'Specifies the value of the Document Type field.';
-                }
-                field("Document No."; Rec."Document No.")
-                {
-                    ToolTip = 'Specifies the value of the Document No. field.';
-                }
-                field("Chargeback No."; Rec."Chargeback No.")
-                {
-                    ToolTip = 'Specifies the value of the Chargeback No. field.';
-                }
-                field("Reversal No."; Rec."Reversal No.")
-                {
-                    ToolTip = 'Specifies the value of the Reversal No. field.';
-                }
                 field("Entry No."; Rec."Entry No.")
                 {
                     ToolTip = 'Specifies the value of the Entry No. field.';
@@ -62,9 +22,57 @@ page 50102 ChargebackEntries
                 {
                     ToolTip = 'Specifies the value of the Posting Date field.';
                 }
+                field("Chargeback No."; Rec."Chargeback No.")
+                {
+                    ToolTip = 'Specifies the value of the Chargeback No. field.';
+                }
+                field(Description; Rec.Description)
+                {
+                    ToolTip = 'Specifies the value of the Description field.';
+                }
+                field("Customer No."; Rec."Customer No.")
+                {
+                    ToolTip = 'Specifies the value of the Customer No. field.';
+                }
+                field("Document Type"; Rec."App-to Document Type")
+                {
+                    ToolTip = 'Specifies the value of the Applies-to Document Type field.';
+                }
+                field("Document No."; Rec."App-to Document No.")
+                {
+                    ToolTip = 'Specifies the value of the Applies-to Document No. field.';
+                }
+                field(Amount; Rec.Amount)
+                {
+                    ToolTip = 'Specifies the value of the Amount field.';
+                }
+                field("Cust. Ledger Entry No."; Rec."Cust. Ledger Entry No.")
+                {
+                    ToolTip = 'Specifies the value of the Cust. Ledger Entry No. field.';
+                }
+                field("Applies-to Cust. Ledger Entry No."; Rec."App-to Cust. Ledger Entry No.")
+                {
+                    ToolTip = 'Specifies the value of the Applies-to Cust. Ledger Entry No. field.';
+                }
                 field(Status; Rec.Status)
                 {
                     ToolTip = 'Specifies the value of the Chargeback Status field.';
+                }
+                // field("Reversed"; Rec."Reversed")
+                // {
+                //     ToolTip = 'Specifies the value of the Reversed field.';
+                // }
+                // field("Reversal No."; Rec."Reversal No.")
+                // {
+                //     ToolTip = 'Specifies the value of the Reversal No. field.';
+                // }
+                field("Cust. Ledger Entry No. (Rev.)"; Rec."Cust. Ledger Entry No. (Rev.)")
+                {
+                    ToolTip = 'Specifies the value of the Cust. Ledger Entry No. (Reversal) field.';
+                }
+                field("Account No."; Rec."Account No.")
+                {
+                    ToolTip = 'Specifies the value of the Account No. field.';
                 }
                 // field(SystemCreatedAt; Rec.SystemCreatedAt)
                 // {
@@ -127,7 +135,7 @@ page 50102 ChargebackEntries
 
     local procedure DeleteChargebackEntry(var ChargebackEntry: Record ChargebackEntry)
     var
-        ChargebackManagement: Codeunit ChargebackManagement;
+        ChargebackManagement: Codeunit ChargebackManagementBGR;
     begin
         ChargebackManagement.DeleteChargebackEntry(ChargebackEntry."Entry No.");
     end;

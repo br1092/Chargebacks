@@ -2,9 +2,9 @@ namespace ALProject.ALProject;
 
 using Microsoft.Finance.GeneralLedger.Journal;
 
-enumextension 50100 GenJnlDocTypeEnumExt extends "Gen. Journal Document Type"
+enumextension 50100 GenJnlDocTypeEnumExtBGR extends "Gen. Journal Document Type"
 {
-    value(7; "Chargeback")
+    value(50100; "Chargeback")
     {
         Caption = 'Chargeback';
     }

@@ -34,11 +34,11 @@ pageextension 50101 ApplyCustomerEntriesExt extends "Apply Customer Entries"
                 ToolTip = 'Enter one or more chargeback(s) against the selected Customer Ledger Entry.';
                 trigger OnAction()
                 var
-                    PostedChargebackEntries: Record ChargebackEntry;
-                    TempChargebackLine: Record ChargebackLine;
+                    // PostedChargebackEntries: Record ChargebackEntry;
+                    // TempChargebackLine: Record ChargebackLine;
                     ApplyChargebacks: Page ApplyChargebacks;
 
-                    ChargebackManagement: Codeunit ChargebackManagement;
+                // ChargebackManagement: Codeunit ChargebackManagementBGR;
                 begin
                     ApplyChargebacks.SetTempApplyingCustLedgEntry(Rec);
 

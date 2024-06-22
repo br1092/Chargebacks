@@ -15,8 +15,8 @@ pageextension 50103 CustomerLedgerEntriesExt extends "Customer Ledger Entries"
             {
                 actionref(EnterChargebacks_Promoted; EnterChargebacks)
                 { }
-                actionref(ReverseChargeback_Promoted; ReverseChargeback)
-                { }
+                // actionref(ReverseChargeback_Promoted; ReverseChargeback)
+                // { }
             }
         }
         addlast("F&unctions")
@@ -36,7 +36,7 @@ pageextension 50103 CustomerLedgerEntriesExt extends "Customer Ledger Entries"
                     TempChargebackLine: Record ChargebackLine;
                     ApplyChargebacks: Page ApplyChargebacks;
 
-                    ChargebackManagement: Codeunit ChargebackManagement;
+                    ChargebackManagement: Codeunit ChargebackManagementBGR;
                 begin
                     ApplyChargebacks.SetTempApplyingCustLedgEntry(Rec);
 
@@ -50,16 +50,16 @@ pageextension 50103 CustomerLedgerEntriesExt extends "Customer Ledger Entries"
 
                 end;
             }
-            action(ReverseChargeback)
-            {
-                Caption = 'Reverse Chargeback';
-                Visible = true;
-                ApplicationArea = All;
-                trigger OnAction()
-                begin
-                    ReverseChargeback(Rec);
-                end;
-            }
+            // action(ReverseChargeback)
+            // {
+            //     Caption = 'Reverse Chargeback';
+            //     Visible = true;
+            //     ApplicationArea = All;
+            //     trigger OnAction()
+            //     begin
+            //         ReverseChargeback(Rec);
+            //     end;
+            // }
             // }
         }
     }
@@ -74,10 +74,10 @@ pageextension 50103 CustomerLedgerEntriesExt extends "Customer Ledger Entries"
     //         exit(ChargebackEntry);
     // end;
 
-    local procedure ReverseChargeback(var CustLedgerEntry: Record "Cust. Ledger Entry")
-    var
-        ChargebackManagement: Codeunit ChargebackManagement;
-    begin
-        ChargebackManagement.ReverseChargeback(Rec);
-    end;
+    // local procedure ReverseChargeback(var CustLedgerEntry: Record "Cust. Ledger Entry")
+    // var
+    //     ChargebackManagement: Codeunit ChargebackManagementBGR;
+    // begin
+    //     ChargebackManagement.ReverseChargeback(Rec);
+    // end;
 }

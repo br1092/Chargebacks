@@ -1,6 +1,6 @@
 namespace ALProject.ALProject;
 
-permissionset 50100 ChargebackManagement
+permissionset 50100 CBManagementBGR
 {
     Assignable = true;
     Caption = 'ChargebackManagement', MaxLength = 30;
@@ -9,7 +9,7 @@ permissionset 50100 ChargebackManagement
         tabledata ChargebackLine = RMID,
         table ChargebackEntry = X,
         tabledata ChargebackEntry = RMID,
-        codeunit ChargebackManagement = X,
+        codeunit ChargebackManagementBGR = X,
         page ChargebackLineEntry = X,
         page ApplyChargebacks = X,
         page ChargebackEntries = X;

@@ -343,8 +343,8 @@ page 50101 ApplyChargebacks
         Rec."Posting Date" := TempApplyingCustLedgEntry."Posting Date";
         Rec."Cust. Ledger Entry No." := TempApplyingCustLedgEntry."Entry No.";
         if SalesReceivablesSetup.FindFirst() then
-            if StrLen(SalesReceivablesSetup."Chargeback Account No.") <> 0 then begin
-                Rec."Account No." := SalesReceivablesSetup."Chargeback Account No.";
+            if StrLen(SalesReceivablesSetup."CB Account No.BGR") <> 0 then begin
+                Rec."Account No." := SalesReceivablesSetup."CB Account No.BGR";
                 Rec.CalcFields("Account Name");
             end;
     end;
@@ -373,14 +373,14 @@ page 50101 ApplyChargebacks
 
     local procedure CreateChargebackEntry(ChargebackLine: Record ChargebackLine; var CustLedgerEntry: Record "Cust. Ledger Entry")
     var
-        ChargebackManagement: Codeunit ChargebackManagement;
+        ChargebackManagement: Codeunit ChargebackManagementBGR;
     begin
         ChargebackManagement.CreateChargebackEntry(ChargebackLine, CustLedgerEntry);
     end;
 
     local procedure PostChargeback(ChargebackLine: Record ChargebackLine; var CustLedgerEntry: Record "Cust. Ledger Entry")
     var
-        ChargebackManagement: Codeunit ChargebackManagement;
+        ChargebackManagement: Codeunit ChargebackManagementBGR;
     begin
         ChargebackManagement.PostChargeback(ChargebackLine, CustLedgerEntry);
     end;
@@ -390,6 +390,7 @@ page 50101 ApplyChargebacks
     begin
         PostChargeback(ChargebackLine, CustLedgerEntry);
         CreateChargebackEntry(ChargebackLine, CustLedgerEntry);
+        UpdateChargebackAfterPosting(ChargebackLine);
     end;
 
     local procedure SetPostedChargebackVisibility()
@@ -401,6 +402,13 @@ page 50101 ApplyChargebacks
         ChargebackEntry.SetRange("Cust. Ledger Entry No.", TempApplyingCustLedgEntry."Entry No.");
         if ChargebackEntry.FindFirst() then
             PostedChargebacksVisible := true;
+    end;
+
+    local procedure UpdateChargebackAfterPosting(ChargebackLine: Record ChargebackLine)
+    var
+        ChargebackManagement: Codeunit ChargebackManagementBGR;
+    begin
+        ChargebackManagement.UpdateChargebackEntryAfterPosting();
     end;
 
     // local procedure UpdatePostedChargebackEntries()

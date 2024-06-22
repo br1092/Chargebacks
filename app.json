@@ -4,12 +4,13 @@
   "publisher": "BGR Softworks LLC",
   "version": "1.0.0.112",
   "brief": "Added chargeback functionality.",
-  "description": "",
-  "privacyStatement": "",
-  "EULA": "",
-  "help": "",
-  "url": "",
-  "logo": "",
+  "description": "Extension for chargeback accounting.",
+  "privacyStatement": "http://bgrsoftworks.com",
+  "EULA": "http://bgrsoftworks.com",
+  "help": "http://bgrsoftworks.com",
+  "url": "http://bgrsoftworks.com",
+  "contextSensitiveHelpUrl": "http://bgrsoftworks.com",
+  "logo": "./img/nav-logo-913B75D494-seeklogo.com.png",
   "dependencies": [],
   "screenshots": [],
   "platform": "1.0.0.0",
@@ -27,6 +28,7 @@
   },
   "runtime": "13.0",
   "features": [
-    "NoImplicitWith"
+    "NoImplicitWith",
+    "TranslationFile"
   ]
 }

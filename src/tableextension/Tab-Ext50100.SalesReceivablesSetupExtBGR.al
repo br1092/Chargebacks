@@ -4,27 +4,30 @@ using Microsoft.Sales.Setup;
 using Microsoft.Foundation.NoSeries;
 using Microsoft.Finance.GeneralLedger.Account;
 
-tableextension 50100 SalesReceivablesSetupExt extends "Sales & Receivables Setup"
+tableextension 50100 SalesReceivablesSetupExtBGR extends "Sales & Receivables Setup"
 {
     fields
     {
-        field(50100; "Chargeback Account No."; Code[20])
+        field(50100; "CB Account No.BGR"; Code[20])
         {
             Caption = 'Chargeback Account No.';
             DataClassification = CustomerContent;
             TableRelation = "G/L Account";
+            Tooltip = 'Chargeback Account No.';
         }
-        field(50101; "Chargeback No. Series"; Code[20])
+        field(50101; "CB No. SeriesBGR"; Code[20])
         {
             Caption = 'Chargeback No. Series';
             DataClassification = CustomerContent;
             TableRelation = "No. Series";
+            Tooltip = 'Chargeback No. Series';
         }
-        field(50102; "Chargeback Reversal No. Series"; Code[20])
+        field(50102; "CB Reversal No. SeriesBGR"; Code[20])
         {
             Caption = 'Chargeback Reversal No. Series';
             DataClassification = CustomerContent;
             TableRelation = "No. Series";
+            Tooltip = 'Chargeback Reversal No. Series';
         }
     }
 }

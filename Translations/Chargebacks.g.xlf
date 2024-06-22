@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Chargebacks">
+    <body>
+      <group id="body">
+        <trans-unit id="Page 4125653674 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Apply Chargebacks</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 4036758471 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Chargeback Entry</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control ChargebackEntry - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 2588032914 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Name of the selected G/L Account to be used for the chargeback.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control Account Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 1622979514 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the G/L Account No. to be used for the chargeback.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control Account No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 636392376 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the amount of the chargeback.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description of the chargeback.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 3710982960 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Posting Date to be used for the chargeback.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control Posting Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applying Document</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 2726191372 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the amount on the entry to be applied.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control ApplyingAmount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 2726191372 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control ApplyingAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 2063495738 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code for the currency that amounts are shown in.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control ApplyingCurrencyCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 2063495738 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Currency Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control ApplyingCurrencyCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 2543154705 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the customer name of the entry to be applied.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control ApplyingCustomerName - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 2543154705 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control ApplyingCustomerName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 2752246651 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the customer number of the entry to be applied.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control ApplyingCustomerNo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 2752246651 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control ApplyingCustomerNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 3962890814 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description of the entry to be applied.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control ApplyingDescription - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 3962890814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control ApplyingDescription - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 1467416734 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the document number of the entry to be applied.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control ApplyingDocumentNo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 1467416734 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control ApplyingDocumentNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 1212845261 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the document type of the entry to be applied.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control ApplyingDocumentType - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 1212845261 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control ApplyingDocumentType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 1001840828 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the posting date of the entry to be applied. This date is used to find the correct exchange rate when applying entries in different currencies.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control ApplyingPostingDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 1001840828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control ApplyingPostingDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 877402184 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the amount on the entry to be applied.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control ApplyingRemainingAmount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Control 877402184 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Remaining Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Control ApplyingRemainingAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Action 3496562731 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Action Manage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Action 1117389428 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posts the selected Chargeback Line.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Action PostSelectedChargeback - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Action 1117389428 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post Chargeback</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Action PostSelectedChargeback - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4125653674 - Action 3383493608 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApplyChargebacks - Action Category_Process - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4285522277 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Chargeback Entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackEntries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4285522277 - Control 1622979514 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Account No. field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackEntries - Control Account No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4285522277 - Control 636392376 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Amount field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackEntries - Control Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4285522277 - Control 2940696175 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Applies-to Cust. Ledger Entry No. field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackEntries - Control Applies-to Cust. Ledger Entry No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4285522277 - Control 2104283938 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Chargeback No. field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackEntries - Control Chargeback No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4285522277 - Control 1582530403 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Cust. Ledger Entry No. field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackEntries - Control Cust. Ledger Entry No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4285522277 - Control 4211721905 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Cust. Ledger Entry No. (Reversal) field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackEntries - Control Cust. Ledger Entry No. (Rev.) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4285522277 - Control 4190130733 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Customer No. field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackEntries - Control Customer No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4285522277 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Description field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackEntries - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4285522277 - Control 486908828 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Applies-to Document No. field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackEntries - Control Document No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4285522277 - Control 2363328873 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Applies-to Document Type field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackEntries - Control Document Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4285522277 - Control 883711285 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Entry No. field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackEntries - Control Entry No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4285522277 - Control 3710982960 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Posting Date field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackEntries - Control Posting Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4285522277 - Control 513339096 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Chargeback Status field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackEntries - Control Status - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4285522277 - Action 3496562731 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackEntries - Action Manage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4285522277 - Action 1910477260 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Deletes the selected Chargeback Entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackEntries - Action DeleteChargeback - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4285522277 - Action 1910477260 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delete Chargeback</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackEntries - Action DeleteChargeback - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4285522277 - Action 3383493608 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackEntries - Action Category_Process - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 760273749 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ChargebackLineEntry</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackLineEntry - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 760273749 - Control 1622979514 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the G/L Account No. to be used for the chargeback.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackLineEntry - Control Account No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 760273749 - Control 636392376 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the amount of the chargeback.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackLineEntry - Control Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 760273749 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description of the chargeback.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackLineEntry - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 760273749 - Control 3320823955 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Line No. to be used for the chargeback.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ChargebackLineEntry - Control Line No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2015227765 - Action 1086385790 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 515652382">
+          <source>Enter one or more chargeback(s) against the selected Customer Ledger Entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ApplyCustomerEntriesExt - Action EnterChargebacks - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2015227765 - Action 1086385790 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 515652382">
+          <source>Enter Chargeback(s)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ApplyCustomerEntriesExt - Action EnterChargebacks - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4161469542 - Action 1086385790 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2393537757">
+          <source>Enter one or more chargeback(s) against the selected Customer Ledger Entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension CustomerLedgerEntriesExt - Action EnterChargebacks - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4161469542 - Action 1086385790 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2393537757">
+          <source>Enter Chargebacks</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension CustomerLedgerEntriesExt - Action EnterChargebacks - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1315048026 - Field 1052356068 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Chargeback Account No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesReceivablesSetupExtBGR - Field CB Account No.BGR - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1315048026 - Field 1052356068 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Chargeback Account No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesReceivablesSetupExtBGR - Field CB Account No.BGR - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1315048026 - Field 3702229302 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Chargeback No. Series</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesReceivablesSetupExtBGR - Field CB No. SeriesBGR - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1315048026 - Field 3702229302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Chargeback No. Series</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesReceivablesSetupExtBGR - Field CB No. SeriesBGR - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1315048026 - Field 815491190 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Chargeback Reversal No. Series</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesReceivablesSetupExtBGR - Field CB Reversal No. SeriesBGR - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1315048026 - Field 815491190 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Chargeback Reversal No. Series</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesReceivablesSetupExtBGR - Field CB Reversal No. SeriesBGR - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2517963903 - EnumValue 35450067 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ChargebackStatus - EnumValue Posted - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2517963903 - EnumValue 3744289816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reversed</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum ChargebackStatus - EnumValue Reversed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 673833467 - EnumValue 2829672523 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 2880478064">
+          <source>Chargeback</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension GenJnlDocTypeEnumExtBGR - EnumValue Chargeback - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 828311991 - Property 2879900210" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ChargebackManagement</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet CBManagementBGR - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2492804419 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Chargebacks</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PostedChargebacksSubform - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2492804419 - Control 1622979514 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Account No. field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PostedChargebacksSubform - Control Account No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2492804419 - Control 636392376 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Amount field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PostedChargebacksSubform - Control Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2492804419 - Control 2104283938 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Chargeback No. field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PostedChargebacksSubform - Control Chargeback No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2492804419 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Description field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PostedChargebacksSubform - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2492804419 - Control 883711285 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Entry No. field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PostedChargebacksSubform - Control Entry No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2492804419 - Control 3710982960 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Posting Date field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PostedChargebacksSubform - Control Posting Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2492804419 - Control 513339096 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Chargeback Status field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page PostedChargebacksSubform - Control Status - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ReversalEntriesBGR</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 2588032914 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies erroneous postings that you want to undo by using the Reverse function.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Account Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 1622979514 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the account number that the reversal was posted to.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Account No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 636392376 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the amount on the entry to be reversed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 592951229 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the amount of the entry in LCY.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Amount (LCY) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 1891586249 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the general ledger, customer, vendor, or bank account that the balancing entry is posted to, such as a cash account for cash purchases.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Bal. Account No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 824028820 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the type of account that a balancing entry is posted to, such as BANK for a cash account.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Bal. Account Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 2556136339 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the total of the ledger entries that represent credits.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Credit Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 4058933634 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the total of the ledger entries that represent credits, expressed in LCY.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Credit Amount (LCY) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 4198939294 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the currency code for the amount on the line.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Currency Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 2796346326 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the total of the ledger entries that represent debits.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Debit Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 322595695 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the total of the ledger entries that represent debits, expressed in LCY.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Debit Amount (LCY) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a description of the record.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 486908828 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the document number of the transaction that created the entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Document No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 2363328873 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the document type that the entry belongs to.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Document Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 883711285 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the entry, as assigned from the specified number series when the entry was created.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Entry No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 149522872 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Entry Type field.</source>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Entry Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 1149081769 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the posting category that is used for fixed assets.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control FA Posting Category - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 1877866625 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the posting type, if Account Type field contains Fixed Asset.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control FA Posting Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 2679649230 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the general ledger register, where the general ledger entry in this record was posted.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control G/L Register No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 2704330142 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the journal batch, a personalized journal layout, that the entries were posted from.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Journal Batch Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 3320823955 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Line No. field.</source>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Line No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 3710982960 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the posting date for the entry.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Posting Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 3029734452 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Reversal Type field.</source>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Reversal Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 2720485332 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the source code that specifies where the entry was created.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Source Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 3024871146 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Source Currency Amount field.</source>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Source Currency Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 1882905478 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies where the entry originated.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Source No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 1753214751 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the source type that applies to the source number that is shown in the Source No. field.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Source Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 3319631365 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the transaction that was reversed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control Transaction No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3891806935 - Control 1108276017 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the amount of VAT that is included in the total amount.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ReversalEntriesBGR - Control VAT Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1226705699 - Control 2227420431 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1692214802">
+          <source>Chargeback Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension SalesInvoiceStatsExt - Control Chargeback Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 433817161 - Field 2227420431 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Chargeback Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesInvoiceHeaderExt - Field Chargeback Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4036758471 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ChargebackEntry</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackEntry - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4036758471 - Field 1622979514 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Account No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackEntry - Field Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4036758471 - Field 636392376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackEntry - Field Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4036758471 - Field 1182424530 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applies-to Cust. Ledger Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackEntry - Field App-to Cust. Ledger Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4036758471 - Field 2718164537 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applies-to Document No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackEntry - Field App-to Document No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4036758471 - Field 1822072548 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applies-to Document Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackEntry - Field App-to Document Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4036758471 - Field 2104283938 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Chargeback No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackEntry - Field Chargeback No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4036758471 - Field 1582530403 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cust. Ledger Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackEntry - Field Cust. Ledger Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4036758471 - Field 4211721905 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cust. Ledger Entry No. (Reversal)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackEntry - Field Cust. Ledger Entry No. (Rev.) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4036758471 - Field 4190130733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackEntry - Field Customer No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4036758471 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackEntry - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4036758471 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackEntry - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4036758471 - Field 3710982960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackEntry - Field Posting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4036758471 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Chargeback Status</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackEntry - Field Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1838985665 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ChargebackLine</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackLine - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1838985665 - Field 2588032914 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackLine - Field Account Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1838985665 - Field 1622979514 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackLine - Field Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1838985665 - Field 636392376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackLine - Field Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1838985665 - Field 1582530403 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cust. Ledger Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackLine - Field Cust. Ledger Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1838985665 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackLine - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1838985665 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackLine - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1838985665 - Field 3710982960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ChargebackLine - Field Posting Date - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
