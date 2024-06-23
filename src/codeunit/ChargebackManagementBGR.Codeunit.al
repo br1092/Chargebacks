@@ -22,9 +22,11 @@ codeunit 50100 ChargebackManagement_BGR
         // ChargebackEntry."Document Type" := CustLedgerEntry."Document Type";
         // ChargebackEntry."Document No." := CustLedgerEntry."Document No.";
 
-        TempNoSeries := GetChargebackNoSeries(false);
+        // TempNoSeries := GetChargebackNoSeries(false);
+        TempNoSeries := GetChargebackNoSeries();
 
         NoSeriesLine.Reset();
+        NoSeriesLine.SetLoadFields("Series Code", Open, "Last No. Used");
         NoSeriesLine.SetRange("Series Code", TempNoSeries);
         NoSeriesLine.SetRange(Open, true);
         if NoSeriesLine.FindFirst() then
@@ -74,7 +76,8 @@ codeunit 50100 ChargebackManagement_BGR
         // GenJournalLine."Document Type" := GenJournalLine."Document Type"::" ";
         GenJournalLine."Document Type" := GenJournalLine."Document Type"::Chargeback;
 
-        GenJournalLine."Posting No. Series" := GetChargebackNoSeries(false);
+        // GenJournalLine."Posting No. Series" := GetChargebackNoSeries(false);
+        GenJournalLine."Posting No. Series" := GetChargebackNoSeries();
         GenJournalLine."Document No." := GetNextChargebackNo(GenJournalLine."Posting No. Series");
 
         GenJournalLine."Account Type" := GenJournalLine."Account Type"::"G/L Account";
@@ -92,8 +95,10 @@ codeunit 50100 ChargebackManagement_BGR
         GenJournalLine."Dimension Set ID" := TempApplyingCustLedgEntry."Dimension Set ID";
 
         SalesReceivablesSetup.Reset();
+        SalesReceivablesSetup.SetLoadFields("CB No. SeriesBGR");
         if SalesReceivablesSetup.FindFirst() then begin
             GenJournalBatch.Reset();
+            GenJournalBatch.SetLoadFields("No. Series", Name);
             GenJournalBatch.SetRange("No. Series", SalesReceivablesSetup."CB No. SeriesBGR");
             if GenJournalBatch.FindFirst() then
                 GenJournalLine."Journal Batch Name" := GenJournalBatch.Name;
@@ -206,17 +211,27 @@ codeunit 50100 ChargebackManagement_BGR
     //             exit(CustLedgerEntry."Entry No.");
     // end;
 
-    local procedure GetChargebackNoSeries(IsReversal: Boolean): Code[20]
+    // local procedure GetChargebackNoSeries(IsReversal: Boolean): Code[20]
+    // var
+    //     SalesReceivablesSetup: Record "Sales & Receivables Setup";
+    // begin
+    //     if SalesReceivablesSetup.FindFirst() then
+    //         if IsReversal then
+    //             // if StrLen(SalesReceivablesSetup."Chargeback Reversal No. Series") <> 0 then
+    //                 exit(SalesReceivablesSetup."CB Reversal No. SeriesBGR")
+    //         else
+    //             // if StrLen(SalesReceivablesSetup."Chargeback No. Series") <> 0 then
+    //             exit(SalesReceivablesSetup."CB No. SeriesBGR");
+    // end;
+
+    local procedure GetChargebackNoSeries(): Code[20]
     var
         SalesReceivablesSetup: Record "Sales & Receivables Setup";
     begin
+        SalesReceivablesSetup.Reset();
+        SalesReceivablesSetup.SetLoadFields("CB No. SeriesBGR");
         if SalesReceivablesSetup.FindFirst() then
-            if IsReversal then
-                // if StrLen(SalesReceivablesSetup."Chargeback Reversal No. Series") <> 0 then
-                    exit(SalesReceivablesSetup."CB Reversal No. SeriesBGR")
-            else
-                // if StrLen(SalesReceivablesSetup."Chargeback No. Series") <> 0 then
-                exit(SalesReceivablesSetup."CB No. SeriesBGR");
+            exit(SalesReceivablesSetup."CB No. SeriesBGR");
     end;
 
     local procedure GetNextChargebackEntryNo(): Integer
@@ -224,6 +239,7 @@ codeunit 50100 ChargebackManagement_BGR
         ChargebackEntry: Record ChargebackEntry_BGR;
     begin
         if not ChargebackEntry.IsEmpty then begin
+            ChargebackEntry.SetLoadFields("Entry No.");
             ChargebackEntry.SetAscending("Entry No.", true);
             if ChargebackEntry.FindLast() then
                 exit(ChargebackEntry."Entry No." + 1)
@@ -314,6 +330,7 @@ codeunit 50100 ChargebackManagement_BGR
     begin
         // if CustLedgEntry."Document Type" = CustLedgEntry."Document Type"::Chargeback then begin
         DtldCustLedgEntry2.Reset();
+        DtldCustLedgEntry2.SetLoadFields("Transaction No.", "Entry Type");
         DtldCustLedgEntry2.SetRange("Transaction No.", CustLedgEntry."Transaction No.");
         DtldCustLedgEntry2.SetRange("Entry Type", DtldCustLedgEntry2."Entry Type"::Application);
         if DtldCustLedgEntry2.FindSet() then begin
@@ -333,18 +350,22 @@ codeunit 50100 ChargebackManagement_BGR
     begin
         // Message('Number: ' + format(Number) + ', RevType: ' + format(RevType));
         GLEntry.Reset();
+        GLEntry.SetLoadFields("Transaction No.", "Bal. Account Type", "Document Type", "Document No.");
         // ReversalEntry.SetRange("Entry Type", RevType);
         GLEntry.SetRange("Transaction No.", Number);
         GLEntry.SetRange("Bal. Account Type", GLEntry."Bal. Account Type"::Customer);
         GLEntry.SetRange("Document Type", GLEntry."Document Type"::Chargeback);
         if GLEntry.FindFirst() then begin
             TempEntryNo := GLEntry."Entry No." + 1;
+            CustLedgerEntry.Reset();
+            CustLedgerEntry.SetLoadFields(Reversed, "Document Type", "Document No.");
             CustLedgerEntry.SetRange(Reversed, true);
             CustLedgerEntry.SetRange("Document Type", CustLedgerEntry."Document Type"::Chargeback);
             CustLedgerEntry.SetRange("Document No.", GLEntry."Document No.");
             if CustLedgerEntry.Get(TempEntryNo) then begin
                 // if CustLedgerEntry.FindFirst() then begin
                 ChargebackEntry.Reset();
+                ChargebackEntry.SetLoadFields("Chargeback No.", "Cust. Ledger Entry No.", Status);
                 ChargebackEntry.SetRange("Chargeback No.", CustLedgerEntry."Document No.");
                 ChargebackEntry.SetRange("Cust. Ledger Entry No.", TempEntryNo);
                 if ChargebackEntry.FindFirst() then begin
@@ -362,11 +383,15 @@ codeunit 50100 ChargebackManagement_BGR
         CustLedgerEntry: Record "Cust. Ledger Entry";
     begin
         CustLedgerEntry.Reset();
+        CustLedgerEntry.SetLoadFields("Document Type", "Document No.", "Entry No.");
         CustLedgerEntry.SetRange("Document Type", CustLedgerEntry."Document Type"::Chargeback);
-        CustLedgerEntry.SetRange("Document No.", GetLastUsedChargebackNo(GetChargebackNoSeries(false)));
+        // CustLedgerEntry.SetRange("Document No.", GetLastUsedChargebackNo(GetChargebackNoSeries(false)));
+        CustLedgerEntry.SetRange("Document No.", GetLastUsedChargebackNo(GetChargebackNoSeries()));
         if CustLedgerEntry.FindFirst() then begin
             ChargebackEntry.Reset();
-            ChargebackEntry.SetRange("Chargeback No.", GetLastUsedChargebackNo(GetChargebackNoSeries(false)));
+            ChargebackEntry.SetLoadFields("Chargeback No.", "Cust. Ledger Entry No.");
+            // ChargebackEntry.SetRange("Chargeback No.", GetLastUsedChargebackNo(GetChargebackNoSeries(false)));
+            ChargebackEntry.SetRange("Chargeback No.", GetLastUsedChargebackNo(GetChargebackNoSeries()));
             if ChargebackEntry.FindFirst() then begin
                 ChargebackEntry."Cust. Ledger Entry No." := CustLedgerEntry."Entry No.";
                 ChargebackEntry.Modify();

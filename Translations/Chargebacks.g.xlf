@@ -308,16 +308,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesReceivablesSetupExt_BGR - Field CB No. SeriesBGR - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 777465187 - Field 815491190 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
-          <source>Chargeback Reversal No. Series</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesReceivablesSetupExt_BGR - Field CB Reversal No. SeriesBGR - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 777465187 - Field 815491190 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
-          <source>Chargeback Reversal No. Series</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesReceivablesSetupExt_BGR - Field CB Reversal No. SeriesBGR - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Enum 3088570007 - EnumValue 35450067 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posted</source>
           <note from="Developer" annotates="general" priority="2"></note>

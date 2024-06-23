@@ -20,11 +20,11 @@ pageextension 50102 SalesReceivablesSetupExt_BGR extends "Sales & Receivables Se
                     Visible = true;
                     ApplicationArea = All;
                 }
-                field("Chargeback Reversal No. Series"; Rec."CB Reversal No. SeriesBGR")
-                {
-                    Visible = true;
-                    ApplicationArea = All;
-                }
+                // field("Chargeback Reversal No. Series"; Rec."CB Reversal No. SeriesBGR")
+                // {
+                //     Visible = true;
+                //     ApplicationArea = All;
+                // }
             }
         }
     }

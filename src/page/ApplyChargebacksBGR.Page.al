@@ -135,7 +135,7 @@ page 50101 ApplyChargebacks_BGR
                 ApplicationArea = Basic, Suite;
                 Editable = true;
                 Enabled = true;
-                SubPageLink = "Cust. Ledger Entry No." = field("Cust. Ledger Entry No.");
+                SubPageLink = "App-to Cust. Ledger Entry No." = field("Cust. Ledger Entry No.");
                 UpdatePropagation = Both;
                 Visible = PostedChargebacksVisible;
             }
@@ -400,9 +400,11 @@ page 50101 ApplyChargebacks_BGR
     begin
         PostedChargebacksVisible := false;
         ChargebackEntry.Reset();
-        ChargebackEntry.SetRange("Cust. Ledger Entry No.", ApplyingCustLedgEntry."Entry No.");
+        ChargebackEntry.SetRange("App-to Cust. Ledger Entry No.", ApplyingCustLedgEntry."Entry No.");
         if not ChargebackEntry.IsEmpty() then
             PostedChargebacksVisible := true;
+        // if ChargebackEntry.FindFirst() then
+        //     PostedChargebacksVisible := true;
     end;
 
     // local procedure UpdateChargebackAfterPosting(ChargebackLine: Record ChargebackLine_BGR)

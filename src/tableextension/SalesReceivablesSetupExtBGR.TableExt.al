@@ -22,12 +22,12 @@ tableextension 50100 SalesReceivablesSetupExt_BGR extends "Sales & Receivables S
             TableRelation = "No. Series";
             Tooltip = 'Chargeback No. Series';
         }
-        field(50102; "CB Reversal No. SeriesBGR"; Code[20])
-        {
-            Caption = 'Chargeback Reversal No. Series';
-            DataClassification = CustomerContent;
-            TableRelation = "No. Series";
-            Tooltip = 'Chargeback Reversal No. Series';
-        }
+        // field(50102; "CB Reversal No. SeriesBGR"; Code[20])
+        // {
+        //     Caption = 'Chargeback Reversal No. Series';
+        //     DataClassification = CustomerContent;
+        //     TableRelation = "No. Series";
+        //     Tooltip = 'Chargeback Reversal No. Series';
+        // }
     }
 }
