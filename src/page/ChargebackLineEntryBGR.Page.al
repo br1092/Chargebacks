@@ -8,6 +8,9 @@ page 50100 ChargebackLineEntry_BGR
     // PageType = List;
     SourceTable = ChargebackLine_BGR;
     Editable = true;
+    AutoSplitKey = true;
+    DelayedInsert = true;
+    MultipleNewLines = true;
 
     layout
     {
@@ -97,9 +100,10 @@ page 50100 ChargebackLineEntry_BGR
     //     Rec."Line No." += 1;
     // end;
 
-    trigger OnNewRecord(BelowxRec: Boolean)
-    begin
-        Rec."Line No." := xRec."Line No." + 1;
-    end;
+    // Replaced by AutoSplitKey
+    // trigger OnNewRecord(BelowxRec: Boolean)
+    // begin
+    //     Rec."Line No." := xRec."Line No." + 1;
+    // end;
 
 }
